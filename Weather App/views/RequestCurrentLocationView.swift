@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreLocationUI
 
-struct WelcomeView: View {
+struct RequestCurrentLocationView: View {
     @EnvironmentObject var locationManager: LocationManager
     
     var body: some View {
@@ -38,5 +38,5 @@ struct WelcomeView: View {
 }
 
 #Preview {
-    WelcomeView()
+    RequestCurrentLocationView()
 }

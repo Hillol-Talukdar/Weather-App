@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CurrentWeatherView: View {
     @StateObject var locationManager = LocationManager()
     var weatherManager = WeatherManager()
     @State var weather: ResponseBody?
@@ -37,7 +37,7 @@ struct ContentView: View {
                 if locationManager.isLoading {
                     LoadingView()
                 } else {
-                    WelcomeView().environmentObject(locationManager)
+                    RequestCurrentLocationView().environmentObject(locationManager)
                 }
             }
             
@@ -49,5 +49,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    CurrentWeatherView()
 }
