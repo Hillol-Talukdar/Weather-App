@@ -16,8 +16,8 @@ struct CityWeatherView: View {
             VStack {
                 // NavigationLink for programmatic navigation
                 NavigationLink(
-//                    destination: CityWeatherDetailView(cityName: searchText),
-                    destination: CurrentWeatherView(),
+                    destination: CityWeatherDetailsView(cityName: searchText),
+//                    destination: CurrentWeatherView(),
                     isActive: $isNavigationActive
                 ) {
                     EmptyView()

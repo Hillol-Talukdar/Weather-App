@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var shouldOpenWeatherView = false
+    @State private var shouldOpenCityWeatherView = false
     
     var body: some View {
         VStack {
@@ -31,13 +32,16 @@ struct HomeView: View {
                 gotoCurrentWeatherView()
             }
             
-            Button(action: {}) {
+            Button(action: {shouldOpenCityWeatherView.toggle()}) {
                 Text("Weather of a city")
             }
             .padding()
             .background(Color.blue)
             .foregroundColor(.white)
             .cornerRadius(30)
+            .fullScreenCover(isPresented: $shouldOpenCityWeatherView) {
+                gotoCityWeatherView()
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
@@ -46,6 +50,10 @@ struct HomeView: View {
     
     private func gotoCurrentWeatherView()-> some View  {
         CurrentWeatherView()
+    }
+    
+    private func gotoCityWeatherView()-> some View  {
+        CityWeatherView()
     }
 }
 

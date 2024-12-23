@@ -26,6 +26,24 @@ class WeatherManager {
         let decodeData = try JSONDecoder().decode(ResponseBody.self, from: data)
         return decodeData
     }
+    
+    func getCitytWeather(cityName: String) async throws -> ResponseBody {
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=\("58d86cfff245d9067abd8ee20410ecbd")&units=metric")
+        else {
+            fatalError("Missing URL")
+        }
+        
+        let urlRequest = URLRequest(url: url)
+        
+        let (data, response) = try await URLSession.shared.data(for: urlRequest)
+        
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+            fatalError("Error fetching weather data")
+        }
+        
+        let decodeData = try JSONDecoder().decode(ResponseBody.self, from: data)
+        return decodeData
+    }
 }
 
 // Model of the response body we get from calling the OpenWeather API

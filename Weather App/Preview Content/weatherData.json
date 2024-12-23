@@ -13,30 +13,30 @@
 ],
 "base": "stations",
 "main": {
-  "temp": 24.99,
-  "feels_like": 24.77,
-  "temp_min": 24.99,
-  "temp_max": 24.99,
+  "temp": 21.99,
+  "feels_like": 21.81,
+  "temp_min": 21.99,
+  "temp_max": 21.99,
   "pressure": 1015,
-  "humidity": 47,
+  "humidity": 60,
   "sea_level": 1015,
-  "grnd_level": 1013
+  "grnd_level": 1014
 },
 "visibility": 2500,
 "wind": {
   "speed": 2.06,
-  "deg": 50
+  "deg": 290
 },
 "clouds": {
-  "all": 0
+  "all": 20
 },
-"dt": 1731903330,
+"dt": 1734494653,
 "sys": {
   "type": 1,
   "id": 9145,
   "country": "BD",
-  "sunrise": 1731888908,
-  "sunset": 1731928336
+  "sunrise": 1734482089,
+  "sunset": 1734520514
 },
 "timezone": 21600,
 "id": 1185241,
