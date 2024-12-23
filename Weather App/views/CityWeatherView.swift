@@ -32,10 +32,14 @@ struct CityWeatherView: View {
                         isNavigationActive = true
                     }
             }
-            .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
+            .preferredColorScheme(.dark)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(hue: 0.656, saturation: 0.787, brightness: 0.354))
         .preferredColorScheme(.dark)
+        
     }
 }
 
